@@ -1,0 +1,10 @@
+
+((NETWORK :NAME "Rain network")
+ (NODE :NAME "Cloudy" :VALS ("T" "F") :PARENTS NIL :TABLE (0.5 0.5) :META
+  (:X -244 :Y -354))
+ (NODE :NAME "Rain" :VALS ("T" "F") :PARENTS ("Cloudy") :TABLE
+  (0.8 0.2 0.2 0.8) :META (:X -15 :Y -178))
+ (NODE :NAME "Sprinkler" :VALS ("T" "F") :PARENTS ("Cloudy") :TABLE
+  (0.1 0.9 0.5 0.5) :META (:X -547 :Y -171))
+ (NODE :NAME "Wet Grass" :VALS ("T" "F") :PARENTS ("Sprinkler" "Rain") :TABLE
+  (0.99 0.01 0.9 0.1 0.9 0.1 0.001 0.999) :META (:X -271 :Y 19))) 

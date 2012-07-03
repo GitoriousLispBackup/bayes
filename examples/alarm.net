@@ -1,0 +1,12 @@
+
+((NETWORK :NAME "Alarm network")
+ (NODE :NAME "Earthquake" :VALS ("True" "False") :PARENTS NIL :TABLE
+  (0.002 0.998) :META (:X -91 :Y -380))
+ (NODE :NAME "Burglary" :VALS ("True" "False") :PARENTS NIL :TABLE
+  (0.001 0.999) :META (:X -413 :Y -344))
+ (NODE :NAME "Alarm" :VALS ("True" "False") :PARENTS ("Burglary" "Earthquake")
+  :TABLE (0.95 0.05 0.94 0.06 0.29 0.71 0.001 0.999) :META (:X -223 :Y -186))
+ (NODE :NAME "Mary Calls" :VALS ("True" "False") :PARENTS ("Alarm") :TABLE
+  (0.7 0.3 0.01 0.99) :META (:X -11 :Y -30))
+ (NODE :NAME "John Calls" :VALS ("True" "False") :PARENTS ("Alarm") :TABLE
+  (0.9 0.1 0.05 0.95) :META (:X -419 :Y -24))) 

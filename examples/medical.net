@@ -1,0 +1,21 @@
+
+((NETWORK :NAME "Medical network")
+ (NODE :NAME "Smoking" :VALS ("True" "False") :PARENTS NIL :TABLE (0.5 0.5)
+  :META (:X -65 :Y -620))
+ (NODE :NAME "Visit to Asia" :VALS ("True" "False") :PARENTS NIL :TABLE
+  (0.01 0.99) :META (:X -405 :Y -627))
+ (NODE :NAME "Bronchitis" :VALS ("True" "False") :PARENTS ("Smoking") :TABLE
+  (0.6 0.4 0.3 0.7) :META (:X 171 :Y -425))
+ (NODE :NAME "Lung cancer" :VALS ("True" "False") :PARENTS ("Smoking") :TABLE
+  (0.1 0.9 0.01 0.99) :META (:X -169 :Y -418))
+ (NODE :NAME "Tuberculosis" :VALS ("True" "False") :PARENTS ("Visit to Asia")
+  :TABLE (0.05 0.95 0.01 0.99) :META (:X -510 :Y -432))
+ (NODE :NAME "Tuberculosis or cancer" :VALS ("True" "False") :PARENTS
+  ("Tuberculosis" "Lung cancer") :TABLE (1 0 1 0 1 0 0 1) :META
+  (:X -278 :Y -261))
+ (NODE :NAME "Dyspnoea" :VALS ("True" "False") :PARENTS
+  ("Bronchitis" "Tuberculosis or cancer") :TABLE
+  (0.9 0.1 0.8 0.2 0.7 0.3 0.1 0.9) :META (:X 44 :Y -102))
+ (NODE :NAME "Positive X-ray" :VALS ("True" "False") :PARENTS
+  ("Tuberculosis or cancer") :TABLE (0.98 0.02 0.05 0.95) :META
+  (:X -449 :Y -97))) 

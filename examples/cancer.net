@@ -1,0 +1,8 @@
+
+((NETWORK :NAME "Cancer network")
+ (NODE :NAME "Cancer" :VALS ("True" "False") :PARENTS NIL :TABLE (0.1 0.9)
+  :META (:X 0 :Y -1))
+ (NODE :NAME "Test1" :VALS ("Positive" "Negative") :PARENTS ("Cancer") :TABLE
+  (0.9 0.1 0.01 0.99) :META (:X -100 :Y 99))
+ (NODE :NAME "Test2" :VALS ("Positive" "Negative") :PARENTS ("Cancer") :TABLE
+  (0.9 0.1 0.01 0.99) :META (:X 100 :Y 99))) 

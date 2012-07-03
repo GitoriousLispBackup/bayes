@@ -1,0 +1,36 @@
+* Bayes is Bayesian inference engine and GUI modeling tool
+
+* Depends on:
+
+  - Qt4
+  - SBCL
+  - sfsexp (http://sexpr.sourceforge.net/)
+
+* Compiling process (GNU/Linux)::
+
+  Inside src/ directory issue commands:
+    export SEXPR=[path_to_sexpr_library]
+    qmake-qt4
+    make
+
+  Inside src/lisp/ directory issue commands:
+    sbcl --script bayes-cmd.lisp
+
+* Windows compiling process:
+
+  This could be built similary as in GNU/Linux environment using MinGW.
+
+* Usage:
+
+  Execute bayes-gui executable inside src/ directory.
+  First time application is executed, path to engine executable
+  (usually under src/lisp/ directory) should be set via "File > Settings"
+  menu.
+
+* URL:
+
+  https://gitorious.org/bayes/
+
+* Contact
+
+  Bug reporting and contact: ivan [at] radicek [dot] com
