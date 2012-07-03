@@ -26,7 +26,7 @@
 Settings* Settings::instance = 0;
 
 // Some default values
-QString Settings::defaultEnginePath = "bayes-cmd.exe";
+QString Settings::defaultEnginePath = "./bayes-cmd";
 
 Settings::Settings(QObject *parent) : QSettings(parent) {
     Q_UNUSED(parent);
